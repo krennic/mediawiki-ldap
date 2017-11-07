@@ -2,6 +2,8 @@ FROM synctree/mediawiki
 
 MAINTAINER Krennic
 
+COPY entrypoint.sh /entrypoint.sh
+
 # Cleanup mediawiki install
 RUN set -x; \
     rm mediawiki.tar.gz mediawiki.tar.gz.sig && \
