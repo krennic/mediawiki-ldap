@@ -6,6 +6,9 @@ COPY entrypoint.sh /entrypoint.sh
 
 # Cleanup mediawiki install
 RUN set -x; \
+    chmod 755 /entrypoint.sh && \
+
+    set -x; \
     rm mediawiki.tar.gz mediawiki.tar.gz.sig && \
 
 	# LDAP requirements
